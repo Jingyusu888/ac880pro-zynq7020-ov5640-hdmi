@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300">
+<rect width="100%" height="100%" fill="#f5f7fb"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#526780"/></marker></defs>
+<text x="55" y="65" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="bold" fill="#182c49">TMDS 编码、传输与解码：整体结构</text>
+<line x1="410.0" y1="230" x2="410.0" y2="290" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="410.0" y1="400" x2="410.0" y2="460" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="410.0" y1="570" x2="900.0" y2="660" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="667.0" y="624.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">DE=1</text>
+<line x1="1390.0" y1="400" x2="900.0" y2="660" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1157.0" y="539.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">DE=0</text>
+<line x1="900.0" y1="770" x2="900.0" y2="850" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="900.0" y1="960" x2="410.0" y2="1050" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="667.0" y="1014.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">视频</text>
+<line x1="900.0" y1="960" x2="1390.0" y2="1050" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1157.0" y="1014.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">控制</text>
+<rect x="80" y="120" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="410.0" y="183.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">8 位颜色 D</text>
+<rect x="80" y="290" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="410.0" y="335.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">第一阶段：XOR / XNOR</text>
+<text x="410.0" y="371.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">生成 9 位中间结果 q_m</text>
+<rect x="80" y="460" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="410.0" y="505.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">第二阶段：依据累计不平衡选择是否反转</text>
+<text x="410.0" y="541.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">生成 10 位视频码</text>
+<rect x="1060" y="290" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="1390.0" y="335.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">控制位 c1、c0</text>
+<text x="1390.0" y="371.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">查表生成 10 位控制码</text>
+<rect x="570" y="660" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="900.0" y="705.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">DE 选择：1 发送视频码，0 发送控制码</text>
+<text x="900.0" y="741.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">控制期间累计不平衡清零</text>
+<rect x="570" y="850" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="900.0" y="895.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">串行化、差分传输与接收</text>
+<text x="900.0" y="931.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">恢复 10 位码字</text>
+<rect x="80" y="1050" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="410.0" y="1095.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">识别为视频码</text>
+<text x="410.0" y="1131.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">撤销反转，再逆向 XOR / XNOR → 8 位颜色</text>
+<rect x="1060" y="1050" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="1390.0" y="1095.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">识别为控制码</text>
+<text x="1390.0" y="1131.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">查表恢复 c1、c0；蓝通道恢复 HS、VS</text>
+<text x="55" y="1250" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#526780">适用范围：本工程的 DVI 视频方式；三个颜色通道各使用一个编码器。</text></svg>

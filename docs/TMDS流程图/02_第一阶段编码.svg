@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050">
+<rect width="100%" height="100%" fill="#f5f7fb"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#526780"/></marker></defs>
+<text x="55" y="65" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="bold" fill="#182c49">第一阶段编码：减少码字内部跳变</text>
+<line x1="900.0" y1="230" x2="900.0" y2="300" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="900.0" y1="410" x2="410.0" y2="500" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="667.0" y="464.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">是</text>
+<line x1="900.0" y1="410" x2="1390.0" y2="500" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1157.0" y="464.0" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#315681">否</text>
+<line x1="410.0" y1="645" x2="900.0" y2="800" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="1390.0" y1="645" x2="900.0" y2="800" stroke="#526780" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="570" y="120" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="900.0" y="183.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">输入 D[7:0]；统计其中 1 的数量 N</text>
+<rect x="570" y="300" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="900.0" y="363.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">N &gt; 4，或 N = 4 且 D[0] = 0？</text>
+<rect x="80" y="500" width="660" height="145" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="410.0" y="544.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">是：选择 XNOR</text>
+<text x="410.0" y="580.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">Q[0]=D[0]；Q[i]=Q[i-1] XNOR D[i]</text>
+<text x="410.0" y="616.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">s=0</text>
+<rect x="1060" y="500" width="660" height="145" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="1390.0" y="544.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">否：选择 XOR</text>
+<text x="1390.0" y="580.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">Q[0]=D[0]；Q[i]=Q[i-1] XOR D[i]</text>
+<text x="1390.0" y="616.5" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">s=1</text>
+<rect x="570" y="800" width="660" height="110" rx="18" fill="white" stroke="#7396bd" stroke-width="2"/>
+<text x="900.0" y="845.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">q_m = {s, Q[7:0]}，共 9 位</text>
+<text x="900.0" y="881.0" text-anchor="middle" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#182c49">B = 2 × Q中1的数量 − 8</text>
+<text x="55" y="1000" font-family="Microsoft YaHei,sans-serif" font-size="25" fill="#526780">Q=q_m[7:0]；s=q_m[8]；B=balance。第一阶段为组合逻辑。</text></svg>

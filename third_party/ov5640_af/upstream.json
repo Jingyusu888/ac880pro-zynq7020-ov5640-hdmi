@@ -1,0 +1,8 @@
+{
+  "repo": "https://github.com/espressif/esp32-camera",
+  "commit": "281d951f75b6559adec3cdb8cf076366da103880",
+  "firmware_bytes": 4077,
+  "firmware_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+  "header_sha256": "0420422fd4175548fa8abf4da484dc56f4642e443d314fa8797bc20fe19690a4",
+  "license_notice": "Upstream repository LICENSE retained verbatim; firmware header has no separate license notice."
+}

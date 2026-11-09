@@ -1,0 +1,62 @@
+{
+  "bitstream": "camera_hdmi_af_top.bit",
+  "sha256": "2481e4c9d7054b6720a8fc227fc4253b0939b1ddb8e37307a055036965c359b4",
+  "bytes": 4045678,
+  "device": "xc7z020clg484-2",
+  "tool": "Vivado 2018.3",
+  "project": "camera_af/camera_af.xpr",
+  "top": "camera_hdmi_af_top",
+  "width": 1280,
+  "height": 720,
+  "AF_mode": "automatic single-shot after power/reset; focus_start tied low in this top",
+  "firmware": {
+    "repo": "https://github.com/espressif/esp32-camera",
+    "commit": "281d951f75b6559adec3cdb8cf076366da103880",
+    "firmware_bytes": 4077,
+    "firmware_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+    "header_sha256": "0420422fd4175548fa8abf4da484dc56f4642e443d314fa8797bc20fe19690a4",
+    "license_notice": "Upstream repository LICENSE retained verbatim; firmware header has no separate license notice."
+  },
+  "simulation": "PASS exact 252 image configuration writes, 4077 firmware bytes, busy polls, firmware status 0x10, and injected firmware NACK keeping image_done high",
+  "timing": {
+    "WNS": 0.97,
+    "TNS": 0,
+    "WHS": 0.054,
+    "THS": 0
+  },
+  "resources": {
+    "LUT": 7427,
+    "LUT_percent": 13.96,
+    "FF": 8175,
+    "FF_percent": 7.68,
+    "BRAM36_equivalent": 4.5,
+    "BRAM_percent": 3.21,
+    "DSP": 0
+  },
+  "LED": {
+    "0": "image_done",
+    "1": "af_ready",
+    "2": "firmware reports focused (not optical verification)",
+    "3": "af_error"
+  },
+  "programmed": true,
+  "physical_motor_verified": false,
+  "optical_autofocus_verified": false,
+  "sources": {
+    "rtl/camera_af/camera_hdmi_af_top.v": "e815d10c556bf8bd4f9ea65153b4646a8089c26952204c659c7f0ab4fb0a6e27",
+    "rtl/camera_af/ov5640_af_camera.v": "8c8211c9006bc904a1d71a0143b5c5a9be50030495ef15def99cb3d6515fb2ca",
+    "rtl/camera_af/ov5640_af_ctrl.v": "f5932df12a45a6f42c01395358c49bd40ce0ac92585d3ef58b04950ae989e582",
+    "rtl/camera_af/ov5640_af_rom.v": "2bc1cef8646b598df396378b6c25b3ef1ef43dd66d2e9be09b568f52ff7043db",
+    "rtl/camera_af/ov5640_init_bus_ctrl.v": "924aa50f92ccea9928f83e13ea3eb71dd6171b1d083a35ae3a5a05e1b6f01ab9",
+    "rtl/camera_af/ov5640_af_firmware.mem": "b4413c62ac04f2db265c81ae7af2dff17908c14bcd61436a4f55a8f0322ecbcb"
+  },
+  "baseline_manifest": "delivery/upgrades/native_720p_20261109/manifest.json",
+  "baseline_source_hashes_verified_unchanged": true,
+  "programming": {
+    "interface": "JTAG volatile",
+    "target": "(omitted)",
+    "device": "xc7z020_1",
+    "startup_status": "HIGH",
+    "log": "program_af.log"
+  }
+}

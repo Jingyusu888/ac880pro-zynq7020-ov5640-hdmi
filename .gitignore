@@ -1,0 +1,31 @@
+# Vivado 编译产物
+*.bit
+*.dcp
+*.ltx
+*.rpx
+*.pb
+*.jou
+*.log
+*.str
+.Xil/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.runs/
+*.gen/
+
+# IP 生成目录（按 README 第 7 节重建）
+**/ip/**/*.dcp
+**/ip/**/*.xml
+
+# 临时与备份
+backups/
+图片区/
+*_runtime_*.backup.log
+webtalk*
+
+# 系统
+Thumbs.db
+.DS_Store
+desktop.ini

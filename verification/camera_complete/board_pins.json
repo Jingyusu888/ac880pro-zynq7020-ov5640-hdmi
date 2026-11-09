@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "ddr_pins_checked": 48,
+  "bank": 35,
+  "schematic": "vendor schematic (details omitted)",
+  "memory_voltage": "1.35V",
+  "template": "DDR3_SDRAM/Components/MT41K128M16XX-15E",
+  "note": "Physical -125 part uses the built-in -15E DDR3L template at 400 MHz; board calibration remains untested."
+}
